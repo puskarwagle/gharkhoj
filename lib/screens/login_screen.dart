@@ -19,7 +19,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _handleLogin() {
     // Basic validation
-    if (_emailController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
+    if (_emailController.text.isNotEmpty &&
+        _passwordController.text.isNotEmpty) {
       context.read<AuthProvider>().login();
       context.go('/home');
     } else {
@@ -67,7 +68,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   hintText: 'Email',
-                  prefixIcon: Icon(Icons.email_outlined, color: AppColors.textSub),
+                  prefixIcon:
+                      Icon(Icons.email_outlined, color: AppColors.textSub),
                 ),
               ),
               const SizedBox(height: 16),
@@ -78,13 +80,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   hintText: 'Password',
-                  prefixIcon: const Icon(Icons.lock_outline, color: AppColors.textSub),
+                  prefixIcon:
+                      const Icon(Icons.lock_outline, color: AppColors.textSub),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscurePassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                      _obscurePassword
+                          ? Icons.visibility_off_outlined
+                          : Icons.visibility_outlined,
                       color: AppColors.textSub,
                     ),
-                    onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
+                    onPressed: () =>
+                        setState(() => _obscurePassword = !_obscurePassword),
                   ),
                 ),
               ),
@@ -94,7 +100,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Checkbox(
                     value: _rememberMe,
-                    onChanged: (value) => setState(() => _rememberMe = value ?? false),
+                    onChanged: (value) =>
+                        setState(() => _rememberMe = value ?? false),
                     activeColor: AppColors.secondary,
                     side: const BorderSide(color: AppColors.textSub, width: 2),
                   ),

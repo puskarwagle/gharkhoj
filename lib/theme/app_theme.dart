@@ -24,7 +24,8 @@ class AppTheme {
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.background,
       cardColor: AppColors.surface,
-      textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme).copyWith(
+      textTheme:
+          GoogleFonts.interTextTheme(ThemeData.dark().textTheme).copyWith(
         displayLarge: GoogleFonts.poppins(
           fontSize: 32,
           fontWeight: FontWeight.bold,

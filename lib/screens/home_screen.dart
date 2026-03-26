@@ -13,9 +13,9 @@ class HomeScreen extends StatelessWidget {
         title: Text(
           'GharKhoj',
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
-            color: AppColors.primary,
-            fontWeight: FontWeight.bold,
-          ),
+                color: AppColors.primary,
+                fontWeight: FontWeight.bold,
+              ),
         ),
         actions: [
           Padding(
@@ -53,45 +53,49 @@ class HomeScreen extends StatelessWidget {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   bool isWide = constraints.maxWidth > 600;
-                  return isWide 
-                    ? Row(
-                        children: [
-                          Expanded(child: _buildActionCard(
-                            context,
-                            title: 'Find a Room',
-                            subtitle: 'Browse listings near you',
-                            icon: Icons.search,
-                            accentColor: AppColors.primary,
-                          )),
-                          const SizedBox(width: 16),
-                          Expanded(child: _buildActionCard(
-                            context,
-                            title: 'Post a Listing',
-                            subtitle: 'List your room for rent',
-                            icon: Icons.add_business_outlined,
-                            accentColor: AppColors.secondary,
-                          )),
-                        ],
-                      )
-                    : Column(
-                        children: [
-                          Expanded(child: _buildActionCard(
-                            context,
-                            title: 'Find a Room',
-                            subtitle: 'Browse listings near you',
-                            icon: Icons.search,
-                            accentColor: AppColors.primary,
-                          )),
-                          const SizedBox(height: 16),
-                          Expanded(child: _buildActionCard(
-                            context,
-                            title: 'Post a Listing',
-                            subtitle: 'List your room for rent',
-                            icon: Icons.assignment_outlined,
-                            accentColor: AppColors.secondary,
-                          )),
-                        ],
-                      );
+                  return isWide
+                      ? Row(
+                          children: [
+                            Expanded(
+                                child: _buildActionCard(
+                              context,
+                              title: 'Find a Room',
+                              subtitle: 'Browse listings near you',
+                              icon: Icons.search,
+                              accentColor: AppColors.primary,
+                            )),
+                            const SizedBox(width: 16),
+                            Expanded(
+                                child: _buildActionCard(
+                              context,
+                              title: 'Post a Listing',
+                              subtitle: 'List your room for rent',
+                              icon: Icons.add_business_outlined,
+                              accentColor: AppColors.secondary,
+                            )),
+                          ],
+                        )
+                      : Column(
+                          children: [
+                            Expanded(
+                                child: _buildActionCard(
+                              context,
+                              title: 'Find a Room',
+                              subtitle: 'Browse listings near you',
+                              icon: Icons.search,
+                              accentColor: AppColors.primary,
+                            )),
+                            const SizedBox(height: 16),
+                            Expanded(
+                                child: _buildActionCard(
+                              context,
+                              title: 'Post a Listing',
+                              subtitle: 'List your room for rent',
+                              icon: Icons.assignment_outlined,
+                              accentColor: AppColors.secondary,
+                            )),
+                          ],
+                        );
                 },
               ),
             ),
@@ -139,8 +143,8 @@ class HomeScreen extends StatelessWidget {
             Text(
               title,
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                fontSize: 20,
-              ),
+                    fontSize: 20,
+                  ),
             ),
             const SizedBox(height: 8),
             Text(
