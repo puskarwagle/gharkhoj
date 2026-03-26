@@ -21,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Icon(
                 Icons.map,
                 size: 600,
-                color: AppColors.primary.withOpacity(0.5),
+                color: AppColors.primary.withValues(alpha: 0.5),
               ),
             ),
           ),
@@ -44,10 +44,10 @@ class WelcomeScreen extends StatelessWidget {
                           color: AppColors.surface,
                           shape: BoxShape.circle,
                           border: Border.all(
-                              color: AppColors.primary.withOpacity(0.3)),
+                              color: AppColors.primary.withValues(alpha: 0.3)),
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.primary.withOpacity(0.2),
+                              color: AppColors.primary.withValues(alpha: 0.2),
                               blurRadius: 12,
                               offset: const Offset(0, 4),
                             ),
@@ -83,7 +83,7 @@ class WelcomeScreen extends StatelessWidget {
                             color: AppColors.textBody,
                             shadows: [
                               Shadow(
-                                color: AppColors.primary.withOpacity(0.8),
+                                color: AppColors.primary.withValues(alpha: 0.8),
                                 blurRadius: 30,
                               ),
                             ],
@@ -189,10 +189,10 @@ class WelcomeScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white.withOpacity(0.05)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withValues(alpha: 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
